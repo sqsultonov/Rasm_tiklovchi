@@ -35,9 +35,13 @@ python -m venv .venv
 pip install -r requirements.txt
 
 Model og‘irliklarini yuklab olish (MUHIM)
+Model fayllari:
+- GFPGANv1.4.pth → [Yuklab olish havolasi](https://github.com/TencentARC/GFPGAN/releases/download/v1.4.0/GFPGANv1.4.pth)
+- RealESRGAN_x4plus.pth → [Yuklab olish havolasi](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth)
+Ushbu fayllarni `./weights/` papkasiga joylashtiring.
 
-Model og‘irliklar repository’da bo‘lmaydi (GitHub LFS cheklovlari va litsenziya talablariga ko‘ra).
-Ularni qo‘lda yuklab olib weights/ papkaga joylashtirasiz:
+
+Model og‘irliklar repository’da yo'q, ularni qo‘lda yuklab olib weights/ papkaga joylashtirasiz:
 
 GFPGANv1.4.pth
 
