@@ -6,7 +6,7 @@ from tkinter import filedialog, messagebox, ttk
 from PIL import Image, ImageTk, ImageFilter
 import warnings
 
-# === AI kutubxonalar ===
+# suniy intellekt kutubxonalar
 try:
     import torch
     import numpy as np
@@ -25,8 +25,6 @@ except ImportError as e:
 
 warnings.filterwarnings("ignore")
 
-
-# === Gradient Background Class ===
 class GradientFrame(tk.Canvas):
     def __init__(self, parent, color1, color2, **kwargs):
         super().__init__(parent, **kwargs)
@@ -46,8 +44,6 @@ class GradientFrame(tk.Canvas):
             self.create_line(0, i, width, i, fill=color, tags=("gradient",))
         self.lower("gradient")
 
-
-# === Asosiy Ilova ===
 class ModernAIRestorerApp:
     def __init__(self, root: tk.Tk):
         self.root = root
@@ -55,16 +51,13 @@ class ModernAIRestorerApp:
         self.root.geometry("1300x850")
         self.root.minsize(950, 650)
 
-        # === Gradient fon ===
         self.bg = GradientFrame(root, "#1e1b4b", "#312e81")
         self.bg.pack(fill="both", expand=True)
         self.bg.bind("<Configure>", self._on_resize)
 
-        # === Markaziy panel ===
         self.card = tk.Frame(self.bg, bg="#201f4a", highlightthickness=2, highlightbackground="#3f3f77")
         self.card.place(relx=0.5, rely=0.5, anchor="center")
 
-        # === O'zgaruvchilar ===
         self.original_image = None
         self.restored_image = None
         self.input_path = None
@@ -133,7 +126,7 @@ class ModernAIRestorerApp:
         darker = tuple(max(0, int(c * 0.85)) for c in rgb)
         return f"#{''.join(f'{c:02x}' for c in darker)}"
 
-    # === Funksiyalar ===
+    # Funksiyalar
     def select_image(self):
         path = filedialog.askopenfilename(
             title="Rasmni tanlang",
@@ -224,3 +217,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ModernAIRestorerApp(root)
     root.mainloop()
+
