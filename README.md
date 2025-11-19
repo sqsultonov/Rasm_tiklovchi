@@ -18,12 +18,6 @@ Interfeys zamonaviy, ishlash tez, natija yuqori sifatli.
 
 ---
 
-## GUI Ko‘rinishi
-
-*(Shu yerga 1–2 ta screenshot qo‘ysangiz juda yaxshi bo‘ladi)*  
-
----
-
 ## O‘rnatish
 
 ### 1. Repository’ni yuklash
