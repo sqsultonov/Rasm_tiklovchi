@@ -25,3 +25,93 @@ Interfeys zamonaviy, ishlash tez, natija yuqori sifatli.
 ```bash
 git clone https://github.com/yourusername/ai-photo-restorer.git
 cd ai-photo-restorer
+
+2. Virtual muhiti yaratish
+Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+3. Kerakli kutubxonalarni o‘rnatish
+pip install -r requirements.txt
+
+Model og‘irliklarini yuklab olish (MUHIM)
+
+Model og‘irliklar repository’da bo‘lmaydi (GitHub LFS cheklovlari va litsenziya talablariga ko‘ra).
+Ularni qo‘lda yuklab olib weights/ papkaga joylashtirasiz:
+
+GFPGANv1.4.pth
+
+Yuklab olish:
+https://github.com/TencentARC/GFPGAN/releases/tag/v1.3.0
+
+Joylash joyi:
+weights/GFPGANv1.4.pth
+
+RealESRGAN_x4plus.pth
+
+Yuklab olish:
+https://github.com/xinntao/Real-ESRGAN/releases
+
+Joylash joyi:
+weights/RealESRGAN_x4plus.pth
+
+Dasturni ishga tushirish
+python gui.py
+
+GUI ochiladi va siz:
+
+Rasm tanlaysiz
+
+“Tiklash” tugmasini bosasiz
+
+Natija o‘zingiz tanlagan papkaga saqlanadi
+
+.EXE fayl yaratish (Windows)
+
+PyInstaller o‘rnating:
+
+pip install pyinstaller
+
+
+Build qiling:
+
+pyinstaller --name "AI Photo Restorer" --windowed --onefile gui.py
+
+
+Yakuniy .exe fayl:
+dist/AI Photo Restorer.exe
+
+Loyihaning tuzilishi
+ai-photo-restorer/
+│
+├─ gui.py                      
+├─ restoration.py              
+├─ requirements.txt
+├─ README.md
+│
+├─ weights/                    
+│   ├─ GFPGANv1.4.pth
+│   └─ RealESRGAN_x4plus.pth
+│
+├─ examples/                   
+└─ results/                    
+
+Litsenziya
+
+Bu loyiha MIT License asosida tarqatiladi.
+GFPGAN va Real-ESRGAN mualliflariga tegishli materiallar o‘z litsenziyalariga ko‘ra qo‘llaniladi.
+
+Rahmat
+
+Loyihada foydalanilgan texnologiyalar:
+
+GFPGAN — https://github.com/TencentARC/GFPGAN
+
+Real-ESRGAN — https://github.com/xinntao/Real-ESRGAN
+
+ESRGAN & BasicSR — Xintao et al.
+
+Muallif
+
+Sultonov Sardorbek Qudrat o'g'li
+Email: sardorbeksultonov@gmail.com
