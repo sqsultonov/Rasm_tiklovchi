@@ -83,8 +83,7 @@ dist/AI Photo Restorer.exe
 
 Loyihaning tuzilishi
 ai-photo-restorer/
-│
-├─ gui.py                      
+│           
 ├─ restoration.py              
 ├─ requirements.txt
 ├─ README.md
